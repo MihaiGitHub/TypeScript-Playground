@@ -8,6 +8,13 @@ class Vehicle {
   }
 }
 
-const vehicle = new Vehicle();
-vehicle.drive();
-vehicle.honk();
+class Car extends Vehicle {
+  // if want method to be diferent than parent class, just redefine in child class
+  drive(): void {
+    console.log("Vroom");
+  }
+}
+
+const car = new Car();
+car.drive();
+car.honk();

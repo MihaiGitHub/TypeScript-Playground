@@ -1,4 +1,5 @@
 class Vehicle {
+  // by default these methods are public, but can also put public in front
   drive(): void {
     console.log("Chugga chugga");
   }
@@ -10,11 +11,16 @@ class Vehicle {
 
 class Car extends Vehicle {
   // if want method to be diferent than parent class, just redefine in child class
-  drive(): void {
+  // but can not change the type of the parent
+  private drive2(): void {
     console.log("Vroom");
+  }
+
+  startDriving(): void {
+    this.drive2();
   }
 }
 
 const car = new Car();
-car.drive();
+car.startDriving();
 car.honk();

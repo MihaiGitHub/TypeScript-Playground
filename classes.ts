@@ -4,7 +4,7 @@ class Vehicle {
     console.log("Chugga chugga");
   }
 
-  honk(): void {
+  protected honk(): void {
     console.log("Beep");
   }
 }
@@ -18,9 +18,9 @@ class Car extends Vehicle {
 
   startDriving(): void {
     this.drive2();
+    this.honk();
   }
 }
 
 const car = new Car();
 car.startDriving();
-car.honk();
